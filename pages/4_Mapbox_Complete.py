@@ -4,9 +4,6 @@ import pandas as pd
 import plotly.express as px
 
 
-
-
-
 px.set_mapbox_access_token(st.secrets["MAPBOX_TOKEN"])
 
 try:
@@ -37,7 +34,7 @@ try:
                     data_frame=dat, 
                     lat="latitude", 
                     lon="longitude",
-                    zoom=8, 
+                    zoom=4, 
                     color="region", 
                     color_discrete_map={"UT": "red", "GA": "blue"},
                     hover_data=["location_name"]
