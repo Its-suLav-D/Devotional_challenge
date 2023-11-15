@@ -2,3 +2,4 @@ streamlit-folium
 folium
 pandas
 numpy
+plotly-express
