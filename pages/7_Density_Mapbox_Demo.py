@@ -3,19 +3,19 @@
 import plotly.express as px
 import pandas as pd
 
-# Read Parquet files into Pandas DataFrames
-patterns = pd.read_parquet("./data/patterns.parquet")
-places_idaho = pd.read_parquet('./data/places.parquet')
+# # Read Parquet files into Pandas DataFrames
+# patterns = pd.read_parquet("./data/patterns.parquet")
+# places_idaho = pd.read_parquet('./data/places.parquet')
 
-# Joining the DataFrames
-joined_df = patterns.merge(
-    places_idaho,
-    on="placekey",
-    how="inner"
-)
+# # Joining the DataFrames
+# joined_df = patterns.merge(
+#     places_idaho,
+#     on="placekey",
+#     how="inner"
+# )
 
-# Filtering the DataFrame
-joined_df = joined_df[joined_df["location_name"].str.contains("[L|l]atter|lds|LDS", regex=True)]
+# # Filtering the DataFrame
+# joined_df = joined_df[joined_df["location_name"].str.contains("[L|l]atter|lds|LDS", regex=True)]
 
 
 # Import streamlit Here ******
