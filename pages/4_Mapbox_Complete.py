@@ -2,15 +2,12 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from dotenv import load_dotenv
-import os
-
-# Load environment variables from .env file
-load_dotenv()
 
 
 
-px.set_mapbox_access_token(st.secrets["MAPBOX_TOKEN"] or os.getenv("MAPBOX_TOKEN"))
+
+
+px.set_mapbox_access_token(st.secrets["MAPBOX_TOKEN"])
 
 try:
     raw = pd.read_parquet("./data/utah_georgia_places.parquet")

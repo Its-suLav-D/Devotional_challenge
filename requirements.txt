@@ -2,4 +2,3 @@ streamlit-folium
 folium
 pandas
 numpy
-python-dotenv
